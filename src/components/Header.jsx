@@ -17,7 +17,7 @@ const Header = () => {
                 </div>
 
                 {/* Navigation Menu - Visible on larger screens */}
-                <nav className="hidden text-xl lg:flex space-x-16 ml-72">
+                <nav className="hidden text-lg lg:flex space-x-11 ml-72">
                     <a href="#home" className="text-white hover:text-purple-600 transition-colors duration-300 ease-in-out">
                         Home
                     </a>
@@ -40,7 +40,7 @@ const Header = () => {
                     <a
                         href="#contact"
                     >
-                        Book a Call
+                        BOOK A CALL
                     </a>
                 </div>
 

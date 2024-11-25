@@ -7,6 +7,7 @@
 *::after {
   margin: 0;
   padding: 0;
+  font-family: Arial, sans-serif;
   box-sizing: border-box;
 }
 
@@ -31,17 +32,18 @@ body {
 }
 
 h1.normal-text {
-    font: 3.8rem 'MutatorSans', sans-serif;
+    font: 4.1rem 'MutatorSans', sans-serif;
   font-weight: 560;
   margin-bottom: 20px;
   color: #dbdbdb;
   display: inline-block;
+  margin: 20px 0;
   opacity: 0;
   animation: fadeIn 2s ease-in forwards;
   }
 
 h1.gradient-text {
-    font: 3.8rem 'Mutatorsans', sans-serif;
+    font: 4.1rem 'Mutatorsans', sans-serif;
   font-weight: 560;
   margin-bottom: 20px;
   color: #dbdbdb;
@@ -74,6 +76,14 @@ div.border {
   font-size: 1rem;
   color: #f4f4f4;
   text-decoration: none;
+}
+p.greyOut {
+  font-size: 21px;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-weight: 450;
+  line-height: 25px;
+  color: #9a9797;
+  margin-top: 18px;
 }
 @keyframes border-gradient {
   0% {
