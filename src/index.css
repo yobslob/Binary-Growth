@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @apply bg-primaryBg; /* Primary background for the body */
+  background-color: #000000;
+  background: linear-gradient(-57deg, #07000f, #000000, #09000d, #000000);
+  background-size: 400% 400%;
+  animation: gradientAnimation 5s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+h1.normal-text {
+    font: 3.8rem 'MutatorSans', sans-serif;
+  font-weight: 560;
+  margin-bottom: 20px;
+  color: #dbdbdb;
+  display: inline-block;
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+  }
+
+h1.gradient-text {
+    font: 3.8rem 'Mutatorsans', sans-serif;
+  font-weight: 560;
+  margin-bottom: 20px;
+  color: #dbdbdb;
+  display: inline-block;
+  background: linear-gradient(90deg, #c96af8, #3d004e); /* Gradient from left to right */
+  -webkit-background-clip: text; /* Clips the background to the text */
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* Makes the text itself transparent to reveal the gradient */
+  margin: 20px 0;
+  opacity: 0;
+  animation: fadeIn 2.8s ease-in forwards;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+div.border {
+  background-color: transparent;
+  border: 1px white solid ;
+  animation: border-gradient 3s infinite;
+  white-space: nowrap;
+  border-radius: 10px;
+  padding: 0.3rem 1.2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #f4f4f4;
+  text-decoration: none;
+}
+@keyframes border-gradient {
+  0% {
+    border-color: #fff;
+  }
+  50% {
+    border-color: #3d3d3d;
+  }
+  100% {
+    border-color: #fff;
+  }
+}
