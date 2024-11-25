@@ -5,7 +5,7 @@ const Header = () => {
 
     return (
         <header className="fixed top-0 left-0 w-full h-2xl bg-gradient-to-b from-black to-transparent backdrop-blur-[1.3px] z-50 py-6">
-            <div className="container mx-auto flex items-center justify-between py-7">
+            <div className="container ml-14 flex items-center justify-between py-7">
                 {/* Logo */}
                 <div className="text-3xl font-bold">
                     <a href="#home" className="text-white mr-3">
@@ -17,7 +17,7 @@ const Header = () => {
                 </div>
 
                 {/* Navigation Menu - Visible on larger screens */}
-                <nav className="hidden text-xl lg:flex space-x-16 mx-9">
+                <nav className="hidden text-xl lg:flex space-x-16 ml-72">
                     <a href="#home" className="text-white hover:text-purple-600 transition-colors duration-300 ease-in-out">
                         Home
                     </a>
@@ -36,7 +36,7 @@ const Header = () => {
                 </nav>
 
                 {/* Book a Call Button */}
-                <div className="hidden border lg:block">
+                <div className="hidden border ml-44 lg:block">
                     <a
                         href="#contact"
                     >
