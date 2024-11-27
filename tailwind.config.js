@@ -12,17 +12,17 @@ export default {
         numbPurple: '#81278d',
         headPurple: '#110025',
       },
+      zIndex: {
+        60: '60',
+      },
       keyframes: {
-        fadeBackground: {
-          '0%': { background: 'linear-gradient(to bottom, transparent, transparent)' },
-          '25%': { background: 'linear-gradient(to bottom, rgba(17, 0, 37, 0.25), transparent)' },
-          '50%': { background: 'linear-gradient(to bottom, rgba(17, 0, 37, 0.5), transparent)' },
-          '75%': { background: 'linear-gradient(to bottom, rgba(17, 0, 37, 0.75), transparent)' },
-          '100%': { background: 'linear-gradient(to bottom, #110025, transparent)' },
+        fadeDown: {
+          '0%': { opacity: '0', transform: 'translateY(-110px)' },
+          '100%': { opacity: '1', transform: 'translateY(-80px)' },
         },
       },
       animation: {
-        fadeBackground: 'fadeBackground 1s ease-in-out',
+        fadeDown: 'fadeDown 1.2s ease-in-out forwards',
       },
 
     },

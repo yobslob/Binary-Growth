@@ -68,7 +68,7 @@ h1.gradient-text {
 div.border {
   position: absolute;
   right: 2%;
-  top:65%;
+  top:57%;
   background-color: transparent;
   border: 1px white solid ;
   animation: border-gradient 3s infinite;
@@ -87,6 +87,7 @@ p.greyOut {
   line-height: 25px;
   color: #9a9797;
   margin-top: 18px;
+  animation: fadeIn 3.8s ease-in forwards;
 }
 @keyframes border-gradient {
   0% {

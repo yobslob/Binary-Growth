@@ -3,10 +3,10 @@ import React, { useState } from "react";
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    return (
-        <header className="fixed top-0 left-0 w-full h-16 bg-gradient-to-b from-headPurple to-transparent animate-fadeBackground backdrop-blur-[1.4px] z-50 py-6">
+    return (<>
+        <div className="absolute top-0 w-full h-32 bg-gradient-to-b from-purple-500/50 to-transparent blur-2xl animate-fadeDown z-60"></div>
+        <header className="fixed top-0 left-0 w-full h-20 bg-gradient-to-b from-black to-transparent backdrop-blur-[2px] z-50 py-6">
             <div className="container h-20 ml-12 flex items-center justify-between">
-                {/* Logo */}
                 <div className="text-2xl pb-5 font-bold">
                     <a href="#home" className="text-white mr-2">
                         Binary
@@ -111,7 +111,7 @@ const Header = () => {
                 </nav>
             )}
         </header>
-    );
+    </>);
 };
 
 export default Header;
