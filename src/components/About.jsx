@@ -51,7 +51,7 @@ const About = () => {
             {/* Counters */}
             <div
                 ref={ref}
-                className="flex flex-col lg:flex-row justify-center items-center ml-40 gap-72"
+                className="flex flex-col lg:flex-row justify-center items-center ml-32 gap-72"
             >
                 {/* Videos Created */}
                 {inView && (
@@ -63,7 +63,7 @@ const About = () => {
                 {/* Videos Generated */}
                 {inView && (
                     <div className="flex flex-col ml-10 items-center">
-                        <Counter start={0} end={400} suffix={<span className="text-6xl">M+</span>} duration={1.3} />
+                        <Counter start={0} end={400} suffix={<span className="text-7xl">M+</span>} duration={1.3} />
                         <p className="mt-2 text-gray-300 text-center">Videos Generated</p>
                     </div>
                 )}

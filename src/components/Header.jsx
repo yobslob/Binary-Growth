@@ -4,11 +4,11 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <header className="fixed top-0 left-0 w-full h-2xl bg-gradient-to-b from-black to-transparent backdrop-blur-[1.3px] z-50 py-6">
-            <div className="container ml-14 flex items-center justify-between py-7">
+        <header className="fixed top-0 left-0 w-full h-16 bg-gradient-to-b from-headPurple to-transparent animate-fadeBackground backdrop-blur-[1.4px] z-50 py-6">
+            <div className="container h-20 ml-12 flex items-center justify-between">
                 {/* Logo */}
-                <div className="text-3xl font-bold">
-                    <a href="#home" className="text-white mr-3">
+                <div className="text-2xl pb-5 font-bold">
+                    <a href="#home" className="text-white mr-2">
                         Binary
                     </a>
                     <a href="#home" className="text-custPurple">
@@ -17,7 +17,7 @@ const Header = () => {
                 </div>
 
                 {/* Navigation Menu - Visible on larger screens */}
-                <nav className="hidden text-lg lg:flex space-x-11 ml-72">
+                <nav className="hidden text-l lg:flex whitespace-nowrap space-x-10 mx-auto pr-44 pb-1">
                     <a href="#home" className="text-white hover:text-purple-600 transition-colors duration-300 ease-in-out">
                         Home
                     </a>
@@ -36,7 +36,7 @@ const Header = () => {
                 </nav>
 
                 {/* Book a Call Button */}
-                <div className="hidden border ml-44 lg:block">
+                <div className="hidden border lg:block">
                     <a
                         href="#contact"
                     >
