@@ -11,6 +11,7 @@ export default {
         custPurple: '#862C92',
         numbPurple: '#81278d',
         headPurple: '#110025',
+        cardPurple: 'rgba(155, 60, 244, 0.1)',
       },
       zIndex: {
         60: '60',
