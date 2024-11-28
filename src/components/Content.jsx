@@ -15,7 +15,7 @@ const Content = () => {
                     className={`px-16 py-2 rounded-xl text-md bord ${activeContent === "short"
                         ? "bg-cyan-700 text-white"
                         : "bg-black text-gray-400"
-                        } transform hover:-translate-y-1 transition-transform duration-300`}
+                        }`}
                 >
                     Short Form Content
                 </button>
@@ -24,7 +24,7 @@ const Content = () => {
                     className={`px-16 py-2 rounded-xl text-md bord ${activeContent === "long"
                         ? "bg-cyan-700 text-white"
                         : "bg-black text-gray-400"
-                        } transform hover:-translate-y-1 transition-transform duration-300`}
+                        }`}
                 >
                     Long Form Content
                 </button>
@@ -33,15 +33,15 @@ const Content = () => {
             {/* Content */}
             <div className="text-center max-w-3xl">
                 {activeContent === "short" && (<>
-                    <p className="text-3xl mb-8 font-semibold">
+                    <p className="text-3xl mb-8 font-semibold animate-popIn">
                         Our Shorts Will Outperform <span className="text-custPurple">Your Current Shorts</span><br></br>
                         In Views by 10% Within 30 Days,<br></br>
                         Or We Will Give You A Full Refund
                     </p>
-                    <p className="text-md font-light">
+                    <p className="text-md font-light animate-popHard">
                         We will put this in a legally-binding contract with no BS or funny business
                     </p>
-                    <div className="bord">
+                    <div className="bord animate-popHard">
                         <a
                             href="#contact"
                         >
@@ -50,15 +50,15 @@ const Content = () => {
                     </div>
                 </>)}
                 {activeContent === "long" && (<>
-                    <p className="text-3xl mb-12 font-semibold">
+                    <p className="text-3xl mb-8 font-semibold animate-popIn">
                         Get your Channel's Watch Time<br></br>
                         increased by 15%, With a <span className="text-custPurple">Youtube Lead Engine</span><br></br>
                         (or You don't pay)
                     </p>
-                    <p className="text-md font-light">
+                    <p className="text-md font-light animate-popHard">
                         We will put this in a legally-binding contract with no BS or funny business
                     </p>
-                    <div className="bord">
+                    <div className="bord animate-popHard">
                         <a
                             href="#contact"
                         >

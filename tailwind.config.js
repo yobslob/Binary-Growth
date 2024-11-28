@@ -21,9 +21,19 @@ export default {
           '0%': { opacity: '0', transform: 'translateY(-110px)' },
           '100%': { opacity: '1', transform: 'translateY(-80px)' },
         },
+        popIn: {
+          '0%': { transform: 'translateY(0%)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        popHard: {
+          '0%': { transform: 'translateY(70%)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
       },
       animation: {
         fadeDown: 'fadeDown 1.2s ease-in-out forwards',
+        popIn: 'popIn 0.3s ease-out',
+        popHard: 'popHard 0.7s ease-out',
       },
 
     },
