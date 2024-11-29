@@ -13,6 +13,7 @@ export default {
         headPurple: '#110025',
         cardPurple: 'rgba(155, 60, 244, 0.1)',
         statePurple: '#b473ed',
+        testPurple: '#8e43a7',
       },
       zIndex: {
         60: '60',

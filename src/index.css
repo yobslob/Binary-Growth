@@ -39,11 +39,11 @@ h1.normal-text {
   display: inline-block;
   margin: 20px 0;
   opacity: 0;
-  animation: fadeIn 2s ease-in forwards;
+  animation: fadeThrough 2s ease-in forwards;
   }
 
 h1.gradient-text {
-    font: 4.1rem 'Mutatorsans', sans-serif;
+  font: 4.1rem 'Mutatorsans', sans-serif;
   font-weight: 560;
   margin-bottom: 20px;
   color: #dbdbdb;
@@ -54,10 +54,19 @@ h1.gradient-text {
   -webkit-text-fill-color: transparent; /* Makes the text itself transparent to reveal the gradient */
   margin: 20px 0;
   opacity: 0;
-  animation: fadeIn 2.8s ease-in forwards;
-  }
+  animation: fadeThrough 2.8s ease-in forwards;
+}
+p.greyOut {
+  font-size: 21px;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-weight: 450;
+  line-height: 25px;
+  color: #9a9797;
+  margin-top: 18px;
+  animation: fadeThrough 3.8s ease-in forwards;
+}
 
-  @keyframes fadeIn {
+  @keyframes fadeThrough {
     0% {
       opacity: 0;
     }
@@ -108,15 +117,6 @@ button.bord {
 
 .animate-fadeIn {
   animation: fadeIn 1s ease-in-out;
-}
-p.greyOut {
-  font-size: 21px;
-  font-family: 'Roboto', Arial, sans-serif;
-  font-weight: 450;
-  line-height: 25px;
-  color: #9a9797;
-  margin-top: 18px;
-  animation: fadeIn 3.8s ease-in forwards;
 }
 @keyframes border-gradient {
   0% {
