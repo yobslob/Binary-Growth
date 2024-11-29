@@ -12,6 +12,7 @@ export default {
         numbPurple: '#81278d',
         headPurple: '#110025',
         cardPurple: 'rgba(155, 60, 244, 0.1)',
+        statePurple: '#b473ed',
       },
       zIndex: {
         60: '60',
@@ -35,7 +36,12 @@ export default {
         popIn: 'popIn 0.3s ease-out',
         popHard: 'popHard 0.7s ease-out',
       },
-
+      opacity: {
+        '40': '0.4', // Add a custom opacity value for 50%
+      },
+      backgroundImage: {
+        customGradient: 'linear-gradient(45deg, #130413, #8e43a7, #131113)',
+      }
     },
   },
   plugins: [],
