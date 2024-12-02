@@ -14,6 +14,7 @@ export default {
         cardPurple: 'rgba(155, 60, 244, 0.1)',
         statePurple: '#b473ed',
         testPurple: '#8e43a7',
+        grey: 'rgb(75, 74, 75)',
       },
       zIndex: {
         60: '60',
