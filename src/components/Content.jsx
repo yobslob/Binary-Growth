@@ -8,6 +8,7 @@ const Content = () => {
     const { ref: blurRef2, inView: blurInView2 } = useInView({ triggerOnce: true });
     const { ref: blurRef3, inView: blurInView3 } = useInView({ triggerOnce: true });
 
+
     return (
         <>
             <section
@@ -66,7 +67,7 @@ const Content = () => {
                                 <div className="flex justify-between space-x-12">
                                     {/* Iframes */}
                                     <iframe
-                                        src="https://player.vimeo.com/video/1004793088?&badge=0&quality=1080p&transparent=0&dnt=1"
+                                        src="https://player.vimeo.com/video/1004793088?title=0&byline=0&portrait=0&badge=0&quality=1080p&transparent=0&dnt=1"
                                         title="Reel 1"
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -74,7 +75,7 @@ const Content = () => {
                                         className="w-auto h-[440px] rounded-xl "
                                     ></iframe>
                                     <iframe
-                                        src="https://player.vimeo.com/video/1000112241?badge=0&loop=1&quality=1080p&transparent=0&dnt=1"
+                                        src="https://player.vimeo.com/video/1000112241?title=0&byline=0&portrait=0&badge=0&loop=1&quality=1080p&transparent=0&dnt=1"
                                         title="Reel 2"
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -82,7 +83,7 @@ const Content = () => {
                                         className="w-auto h-[440px] rounded-xl"
                                     ></iframe>
                                     <iframe
-                                        src="https://player.vimeo.com/video/1000144834?badge=0&loop=1&quality=1080p&transparent=0&dnt=1"
+                                        src="https://player.vimeo.com/video/1000144834?title=0&byline=0&portrait=0&badge=0&loop=1&quality=1080p&transparent=0&dnt=1"
                                         title="Reel 3"
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -104,7 +105,7 @@ const Content = () => {
                                 <div className="flex justify-between space-x-12">
                                     {/* Iframes */}
                                     <iframe
-                                        src="https://player.vimeo.com/video/1000136232?&badge=0&quality=1080p&transparent=0&dnt=1"
+                                        src="https://player.vimeo.com/video/1000136232?title=0&byline=0&portrait=0&badge=0&quality=1080p&transparent=0&dnt=1"
                                         title="Reel 1"
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -112,7 +113,7 @@ const Content = () => {
                                         className="w-auto h-[440px] rounded-xl "
                                     ></iframe>
                                     <iframe
-                                        src="https://player.vimeo.com/video/1000135296?badge=0&loop=1&quality=1080p&transparent=0&dnt=1"
+                                        src="https://player.vimeo.com/video/1000135296?title=0&byline=0&portrait=0&badge=0&loop=1&quality=1080p&transparent=0&dnt=1"
                                         title="Reel 2"
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -120,7 +121,7 @@ const Content = () => {
                                         className="w-auto h-[440px] rounded-xl"
                                     ></iframe>
                                     <iframe
-                                        src="https://player.vimeo.com/video/1004792092?badge=0&loop=1&quality=1080p&transparent=0&dnt=1"
+                                        src="https://player.vimeo.com/video/1004792092?title=0&byline=0&portrait=0&badge=0&loop=1&quality=1080p&transparent=0&dnt=1"
                                         title="Reel 3"
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -142,7 +143,7 @@ const Content = () => {
                                 <div className="flex justify-between space-x-12">
                                     {/* Iframes */}
                                     <iframe
-                                        src="https://player.vimeo.com/video/1000131679?&badge=0&quality=1080p&transparent=0&dnt=1"
+                                        src="https://player.vimeo.com/video/1000131679?title=0&byline=0&portrait=0&badge=0&quality=1080p&transparent=0&dnt=1"
                                         title="Reel 1"
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -150,7 +151,7 @@ const Content = () => {
                                         className="w-auto h-[440px] rounded-xl"
                                     ></iframe>
                                     <iframe
-                                        src="https://player.vimeo.com/video/1000131220?badge=0&loop=1&quality=1080p&transparent=0&dnt=1"
+                                        src="https://player.vimeo.com/video/1000131220?title=0&byline=0&portrait=0&badge=0&loop=1&quality=1080p&transparent=0&dnt=1"
                                         title="Reel 2"
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -158,7 +159,7 @@ const Content = () => {
                                         className="w-auto h-[440px] rounded-xl"
                                     ></iframe>
                                     <iframe
-                                        src="https://player.vimeo.com/video/1004797784?badge=0&loop=1&quality=1080p&transparent=0&dnt=1"
+                                        src="https://player.vimeo.com/video/1004797784?title=0&byline=0&portrait=0&badge=0&loop=1&quality=1080p&transparent=0&dnt=1"
                                         title="Reel 3"
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
