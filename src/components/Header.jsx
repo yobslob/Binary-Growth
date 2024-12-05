@@ -30,9 +30,9 @@ const Header = () => {
                     </div>
 
                     {/* Navigation Menu - Visible on larger screens */}
-                    <nav className="hidden lg:flex whitespace-nowrap space-x-6 md:space-x-10 md:mx-auto pl-44 md:pr-12">
+                    <nav className="hidden lg:flex whitespace-nowrap space-x-6 md:space-x-10 md:mx-auto md:pr-12">
                         <ScrollLink
-                            to="home"
+                            to="title"
                             smooth={true}
                             duration={500}
                             className="text-white hover:text-purple-600 transition-colors duration-300 ease-in-out cursor-pointer"
@@ -80,7 +80,9 @@ const Header = () => {
                             animation: "border-gradient 3s infinite",
                         }}
                     >
-                        Book A Call
+                        <a href="#booking">
+                            Book A Call
+                        </a>
                     </div>
 
                     {/* Hamburger Icon - Visible on smaller screens */}
@@ -116,6 +118,15 @@ const Header = () => {
                     <nav className="lg:hidden fixed top-8 right-7 w-1/4 bg-transparent backdrop-blur-[3px] shadow-md">
                         <div className="flex flex-col items-center space-y-3 py-4 animate-fadeIn">
                             <ScrollLink
+                                to="home"
+                                smooth={true}
+                                duration={500}
+                                className="text-white hover:text-blue-600 cursor-pointer"
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                Home
+                            </ScrollLink>
+                            <ScrollLink
                                 to="about"
                                 smooth={true}
                                 duration={500}
@@ -123,15 +134,6 @@ const Header = () => {
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 About
-                            </ScrollLink>
-                            <ScrollLink
-                                to="services"
-                                smooth={true}
-                                duration={500}
-                                className="text-white hover:text-blue-600 cursor-pointer"
-                                onClick={() => setIsMenuOpen(false)}
-                            >
-                                Services
                             </ScrollLink>
                             <ScrollLink
                                 to="clients"
@@ -152,7 +154,7 @@ const Header = () => {
                                 Reviews
                             </ScrollLink>
                             <a
-                                href="#contact"
+                                href="#booking"
                                 className="bg-transparent border border-white text-white px-4 py-2 rounded-lg"
                                 onClick={() => setIsMenuOpen(false)}
                             >

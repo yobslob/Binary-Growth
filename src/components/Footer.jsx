@@ -11,7 +11,7 @@ const Footer = () => {
             {/* Social Media Icons */}
             <div className="flex justify-center space-x-6 mb-6">
                 <a
-                    href="https://www.instagram.com"
+                    href="https://www.instagram.com/l_kshay22/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group text-gray-400 hover:text-white transition-colors duration-300"
@@ -24,7 +24,7 @@ const Footer = () => {
                     />
                 </a>
                 <a
-                    href="https://www.twitter.com"
+                    href="https://www.x.com/Lkshyon1"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group text-gray-400 hover:text-white transition-colors duration-300"
@@ -37,7 +37,7 @@ const Footer = () => {
                     />
                 </a>
                 <a
-                    href="https://www.linkedin.com"
+                    href="https://www.linkedin.com/in/wifi1smjh1k1connect1hoja/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group text-gray-400 hover:text-white transition-colors duration-300"

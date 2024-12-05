@@ -13,42 +13,42 @@ const clients = [
     {
         name: "Andy Stauring",
         image: crc1,
-        instagram: "https://instagram.com/client1",
+        instagram: "https://instagram.com/andystauring/",
     },
     {
         name: "Serge Gatauri",
         image: crc2,
-        instagram: "https://instagram.com/client2",
+        instagram: "https://instagram.com/sergegatari/",
     },
     {
         name: "Ankit Arora",
         image: crc3,
-        instagram: "https://instagram.com/client3",
+        instagram: "https://instagram.com/ai_ankitarora/",
     },
     {
         name: "Kenneth Corbin",
         image: crc4,
-        instagram: "https://instagram.com/client4",
+        instagram: "https://instagram.com/knnthcrbn/",
     },
     {
         name: "Dominy kas",
         image: crc5,
-        instagram: "https://instagram.com/client4",
+        instagram: "https://instagram.com/Dominykas/",
     },
     {
         name: "Yorgen",
         image: crc6,
-        instagram: "https://instagram.com/client4",
+        instagram: "https://instagram.com/yobslub",
     },
     {
         name: "Naz",
         image: crc7,
-        instagram: "https://instagram.com/client4",
+        instagram: "https://instagram.com/bdsbabe/",
     },
     {
         name: "Omar",
         image: crc8,
-        instagram: "https://instagram.com/client4",
+        instagram: "https://instagram.com/omar.creo/",
     },
 ];
 

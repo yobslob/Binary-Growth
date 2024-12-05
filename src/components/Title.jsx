@@ -3,7 +3,7 @@ import { motion } from "framer-motion"; // For animations
 
 const Title = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center gradient-bg px-4 sm:px-8">
+    <section id="title" className="min-h-screen flex flex-col justify-center items-center gradient-bg px-4 sm:px-8">
       {/* Row for "Grow With Binary" */}
       <div className="flex flex-wrap justify-center items-center space-x-2 lg:space-x-3 lg:mt-32">
         {/* Normal Text */}

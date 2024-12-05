@@ -30,7 +30,7 @@ const BookingContent = () => {
     }, []);
 
     return (
-        <div className="booking-content flex flex-col max-w-full items-center p-4 md:p-6">
+        <div id="booking" className="booking-content flex flex-col max-w-full items-center p-4 md:p-6">
             <h1 className="booking-heading text-3xl md:text-4xl font-bold text-center mt-32 md:mt-64 mb-4 md:mb-8">
                 Book a Call
             </h1>

@@ -55,7 +55,7 @@ const Content = () => {
                         </p>
                         <div className="bg-transparent border border-white whitespace-nowrap rounded-lg py-3 mx-[30%] lg:mx-[40%] mb-44 animate-popHard ">
                             <a
-                                href="#contact"
+                                href="#booking"
                                 className="bg-transparent lg:px-6 py-2 rounded-lg text-white "
                             >
                                 BOOK A CALL
@@ -153,7 +153,7 @@ const Content = () => {
                         </p>
                         <div className="bg-transparent border border-white whitespace-nowrap rounded-lg py-3 mx-[30%] lg:mx-[35%] mb-44 animate-popHard">
                             <a
-                                href="#contact"
+                                href="#booking"
                                 className="bg-transparent px-6 py-2 rounded-lg text-white"
                             >
                                 BOOK A CALL
