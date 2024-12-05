@@ -56,7 +56,7 @@ const Clients = () => {
     return (
         <section
             id="clients"
-            className="min-h-screen gradient-bg text-white flex flex-col items-center justify-center px-4"
+            className="min-h-[70vh] md:min-h-screen gradient-bg text-white flex flex-col items-center justify-center px-4"
         >
             {/* Heading */}
             <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold mb-12 md:mb-24">

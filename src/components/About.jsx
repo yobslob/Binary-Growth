@@ -35,7 +35,7 @@ const About = () => {
     return (
         <section
             id="about"
-            className="min-h-screen gradient-bg text-white flex flex-col items-center justify-center py-6 px-4 sm:px-8"
+            className="min-h-[70vh] md:min-h-screen gradient-bg text-white flex flex-col items-center justify-center py-6 px-4 sm:px-8"
         >
             {/* Heading */}
             <div className="text-center mb-8 sm:mb-12">
