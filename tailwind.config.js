@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: '480px', // Define the breakpoint for extra small screens
+      },
       colors: {
         primaryBg: '#07000f', // or any other color code you prefer
         custPurple: '#862C92',
@@ -37,6 +40,7 @@ export default {
         fadeDown: 'fadeDown 1.2s ease-in-out forwards',
         popIn: 'popIn 0.3s ease-out',
         popHard: 'popHard 0.7s ease-out',
+        'border-gradient': 'border-gradient 3s infinite',
       },
       opacity: {
         '40': '0.4', // Add a custom opacity value for 50%

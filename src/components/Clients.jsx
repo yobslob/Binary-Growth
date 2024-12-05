@@ -50,31 +50,30 @@ const clients = [
         image: crc8,
         instagram: "https://instagram.com/client4",
     },
-    // Add more clients as needed
 ];
 
 const Clients = () => {
     return (
         <section
             id="clients"
-            className="min-h-screen gradient-bg text-white flex flex-col items-center justify-center"
+            className="min-h-screen gradient-bg text-white flex flex-col items-center justify-center px-4"
         >
             {/* Heading */}
-            <h2 className="text-3xl lg:text-4xl font-bold mb-32">
+            <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold mb-12 md:mb-24">
                 Trusted By :
             </h2>
 
             {/* Scrolling Container */}
             <div className="relative w-full max-w-6xl overflow-hidden">
                 {/* Blur Effects */}
-                <div className="absolute top-0 left-0 h-full w-24 bg-gradient-to-r from-black to-transparent z-10"></div>
-                <div className="absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-black to-transparent z-10"></div>
+                <div className="absolute top-0 left-0 h-full w-12 md:w-24 bg-gradient-to-r from-black to-transparent z-10"></div>
+                <div className="absolute top-0 right-0 h-full w-12 md:w-24 bg-gradient-to-l from-black to-transparent z-10"></div>
 
                 {/* Scroller */}
                 <motion.div
-                    className="flex space-x-16 bg-transparent h-32 items-center"
+                    className="flex space-x-8 md:space-x-16 bg-transparent h-28 md:h-32 items-center"
                     style={{
-                        animation: "scroll 50s linear infinite", // Use CSS animation for seamless scrolling
+                        animation: "scroll 50s linear infinite",
                         width: `${clients.length * 60}%`,
                     }}
                 >
@@ -85,14 +84,16 @@ const Clients = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             key={index}
-                            className="flex items-center bg-cardPurple rounded-full p-2 pr-8 w-[370px] whitespace-nowrap transform hover:-translate-y-2 transition-transform duration-300"
+                            className="flex items-center bg-cardPurple rounded-full md:rounded-lg px-20 py-2 pl-2 md:pl-4 md:pr-8 w-[350px] md:w-[370px] whitespace-nowrap transform hover:-translate-y-2 transition-transform duration-300"
                         >
                             <img
                                 src={client.image}
                                 alt={client.name}
-                                className="w-20 h-20 rounded-full"
+                                className="w-12 h-12 md:w-20 md:h-20 rounded-full"
                             />
-                            <p className="text-gray-300 text-xl mx-auto font-semibold">{client.name}</p>
+                            <p className="text-gray-300 text-base md:text-2xl pl-4 md:pr-20 md:pl-8 font-semibold ">
+                                {client.name}
+                            </p>
                         </a>
                     ))}
                 </motion.div>
@@ -111,10 +112,7 @@ const Clients = () => {
     }
     `}
             </style>
-
         </section>
-
-
     );
 };
 
