@@ -7,7 +7,9 @@ Basically, It comprises of a Landing page for the SMMA Binary Growth.
 
 Your growth is our priority, and we believe in building lasting partnerships through transparency, innovation, and real results.</p>
 
-Here's a preview to the home page :<br>
+Here's a preview to the home page :
+<br>
+
 ![Project Screenshot](src/assets/ss.png)
 <h2>Tech Stack</h2>
 Front-end
@@ -20,9 +22,11 @@ Front-end
 <h2>Prerequisites</h2>
 Make sure you have Git & node installed on your system.
 Verify this by running this on your system : 
+
 ```console
 git --version
 ```
+
 ```console
 node --version
 npm --version
