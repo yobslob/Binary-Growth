@@ -14,7 +14,7 @@ const Header = () => {
                         <ScrollLink
                             to="home"
                             smooth={true}
-                            duration={500}
+                            duration={900}
                             className="text-white mr-2 cursor-pointer"
                         >
                             Binary
@@ -22,7 +22,7 @@ const Header = () => {
                         <ScrollLink
                             to="home"
                             smooth={true}
-                            duration={500}
+                            duration={900}
                             className="text-custPurple cursor-pointer"
                         >
                             Growth
@@ -34,7 +34,7 @@ const Header = () => {
                         <ScrollLink
                             to="title"
                             smooth={true}
-                            duration={500}
+                            duration={900}
                             className="text-white hover:text-purple-600 transition-colors duration-300 ease-in-out cursor-pointer"
                         >
                             Home
@@ -42,7 +42,7 @@ const Header = () => {
                         <ScrollLink
                             to="clients"
                             smooth={true}
-                            duration={500}
+                            duration={900}
                             className="text-white hover:text-purple-600 transition-colors duration-300 ease-in-out cursor-pointer"
                         >
                             Previous Clients
@@ -50,7 +50,7 @@ const Header = () => {
                         <ScrollLink
                             to="reviews"
                             smooth={true}
-                            duration={500}
+                            duration={900}
                             className="text-white hover:text-purple-600 transition-colors duration-300 ease-in-out cursor-pointer"
                         >
                             Contact
@@ -58,7 +58,7 @@ const Header = () => {
                         <ScrollLink
                             to="content"
                             smooth={true}
-                            duration={500}
+                            duration={900}
                             className="text-white hover:text-purple-600 transition-colors duration-300 ease-in-out cursor-pointer"
                         >
                             Our Work
@@ -66,7 +66,7 @@ const Header = () => {
                         <ScrollLink
                             to="reviews"
                             smooth={true}
-                            duration={500}
+                            duration={900}
                             className="text-white hover:text-purple-600 transition-colors duration-300 ease-in-out cursor-pointer"
                         >
                             About Us
@@ -120,7 +120,7 @@ const Header = () => {
                             <ScrollLink
                                 to="home"
                                 smooth={true}
-                                duration={500}
+                                duration={900}
                                 className="text-white hover:text-blue-600 cursor-pointer"
                                 onClick={() => setIsMenuOpen(false)}
                             >
@@ -129,7 +129,7 @@ const Header = () => {
                             <ScrollLink
                                 to="about"
                                 smooth={true}
-                                duration={500}
+                                duration={900}
                                 className="text-white hover:text-blue-600 cursor-pointer"
                                 onClick={() => setIsMenuOpen(false)}
                             >
@@ -138,7 +138,7 @@ const Header = () => {
                             <ScrollLink
                                 to="clients"
                                 smooth={true}
-                                duration={500}
+                                duration={900}
                                 className="text-white hover:text-blue-600 cursor-pointer"
                                 onClick={() => setIsMenuOpen(false)}
                             >
@@ -147,7 +147,7 @@ const Header = () => {
                             <ScrollLink
                                 to="reviews"
                                 smooth={true}
-                                duration={500}
+                                duration={900}
                                 className="text-white hover:text-blue-600 cursor-pointer"
                                 onClick={() => setIsMenuOpen(false)}
                             >
