@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useInView } from "react-intersection-observer";
+import { Link as ScrollLink } from "react-scroll";
 
 const Content = () => {
     const [activeContent, setActiveContent] = useState("short");
@@ -73,7 +74,7 @@ const Content = () => {
                                 Daniel Dalen's Style
                             </h1>
                             <div className="flex h-72 bg-transparent flex-wrap justify-center gap-3 lg:gap-12 mb-44 md:mb-36 lg:mb-96">
-                                {["1004793088", "1000112241", "1000144834"].map((id) => (
+                                {["1004793088", "1000112241", "1000144834"].map((id, index) => (
                                     <iframe
                                         key={id}
                                         src={`https://player.vimeo.com/video/${id}?title=0&byline=0&portrait=0&badge=0&quality=1080p&transparent=0&dnt=1`}
@@ -81,7 +82,8 @@ const Content = () => {
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                         allowFullScreen
-                                        className="w-[31%] lg:w-auto sm:w-[31%] xs:h-[350px] lg:h-[430px] h-[400px] rounded-xl"
+                                        className={`w-[45%] lg:w-auto sm:w-[45%] xs:h-[350px] lg:h-[430px] h-[400px] rounded-xl ${index === 2 ? "hidden sm:block" : ""}
+                    `}
                                     ></iframe>
                                 ))}
                             </div>
@@ -97,7 +99,7 @@ const Content = () => {
                                 Motion Graphics
                             </h1>
                             <div className="flex h-72 bg-transparent flex-wrap justify-center gap-3 lg:gap-12 mb-44 md:mb-36 lg:mb-96">
-                                {["1000136232", "1000135296", "1004792092"].map((id) => (
+                                {["1000136232", "1000135296", "1004792092"].map((id, index) => (
                                     <iframe
                                         key={id}
                                         src={`https://player.vimeo.com/video/${id}?title=0&byline=0&portrait=0&badge=0&quality=1080p&transparent=0&dnt=1`}
@@ -105,7 +107,8 @@ const Content = () => {
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                         allowFullScreen
-                                        className="w-[31%] lg:w-auto sm:w-[31%] sm:h-[380px] lg:h-[430px] h-[400px] rounded-xl"
+                                        className={`w-[45%] lg:w-auto sm:w-[45%] sm:h-[380px] lg:h-[430px] h-[400px] rounded-xl ${index === 2 ? "hidden sm:block" : ""}
+                    `}
                                     ></iframe>
                                 ))}
                             </div>
@@ -120,8 +123,8 @@ const Content = () => {
                             <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold text-center mb-9 sm:mb-10 md:mb-10 lg:mb-12">
                                 Informative Shorts
                             </h1>
-                            <div className="flex h-72 bg-transparent flex-wrap justify-center gap-3 lg:gap-12 mb-44 md:mb-36 lg:mb-96">
-                                {["1000131679", "1000131220", "1004797784"].map((id) => (
+                            <div className="flex h-72 bg-transparent flex-wrap justify-center gap-3 lg:gap-12 mb-44 md:mb-36 lg:mb-72">
+                                {["1000131679", "1000131220", "1004797784"].map((id, index) => (
                                     <iframe
                                         key={id}
                                         src={`https://player.vimeo.com/video/${id}?title=0&byline=0&portrait=0&badge=0&quality=1080p&transparent=0&dnt=1`}
@@ -129,7 +132,8 @@ const Content = () => {
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                         allowFullScreen
-                                        className="w-[31%] lg:w-auto sm:w-[31%] sm:h-[380px] lg:h-[430px] h-[400px] rounded-xl"
+                                        className={`w-[45%] lg:w-auto sm:w-[45%] sm:h-[380px] lg:h-[430px] h-[400px] rounded-xl ${index === 2 ? "hidden sm:block" : ""}
+                    `}
                                     ></iframe>
                                 ))}
                             </div>
@@ -198,7 +202,7 @@ const Content = () => {
                                 ></iframe>
                             </div>
                         </div>
-                        <div className="relative max-w-full mx-auto px-0 pt-6 pb-12 bg-transparent rounded-lg shadow-lg">
+                        <div className="relative max-w-full mx-auto px-0 pt-6 pb-12 md:pb-28 bg-transparent rounded-lg shadow-lg">
                             <div
                                 ref={blurRef3}
                                 className={`absolute top-12 left-[10%] w-[300px] sm:w-[400px] lg:w-[570px] h-20 bg-customGradient rounded-full ${blurInView1 ? "animate-fadeIn" : "opacity-0"
@@ -220,6 +224,33 @@ const Content = () => {
                     </>
                 )}
             </div>
+            <div className="flex flex-row lg:space-x-44 space-x-12 mb-32">
+                <ScrollLink
+                    to="content"
+                    onClick={() => setActiveContent("short")}
+                    smooth={true}
+                    duration={900}
+                    className={`whitespace-nowrap rounded-lg px-4 lg:px-12 py-1 cursor-pointer text-xs md:text-base ${activeContent === "short"
+                        ? " lg:bg-cyan-700 border border-white animate-border-gradient text-white"
+                        : "bg-transparent lg:border lg:border-white lg:animate-border-gradient"
+                        }`}
+                >
+                    Short Form Content
+                </ScrollLink>
+                <ScrollLink
+                    to="content"
+                    onClick={() => setActiveContent("long")}
+                    smooth={true}
+                    duration={900}
+                    className={` whitespace-nowrap rounded-lg px-4 lg:px-12 py-1 cursor-pointer text-xs md:text-base ${activeContent === "long"
+                        ? "lg:bg-cyan-700 border border-white animate-border-gradient text-white"
+                        : "bg-transparent lg:border lg:border-white lg:animate-border-gradient"
+                        }`}
+                >
+                    Long Form Content
+                </ScrollLink>
+            </div>
+            <hr className="w-1/3 sm:w-1/3 lg:w-1/4 border-t-1 border-grey mx-auto mb-16 lg:mb-36"></hr>
         </section>
     );
 };

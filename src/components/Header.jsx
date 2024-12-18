@@ -155,7 +155,7 @@ const Header = () => {
                             </ScrollLink>
                             <a
                                 href="#booking"
-                                className="bg-transparent border border-white text-white px-4 py-2 rounded-lg"
+                                className="bg-transparent border whitespace-nowrap border-white text-white px-4 py-2 rounded-lg"
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 Book a Call
