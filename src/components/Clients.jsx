@@ -84,7 +84,7 @@ const Clients = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             key={index}
-                            className="flex items-center bg-cardPurple rounded-full md:rounded-lg px-20 py-2 pl-2 md:pl-4 md:pr-8 w-[350px] md:w-[370px] whitespace-nowrap transform hover:-translate-y-2 transition-transform duration-300"
+                            className="flex items-center bg-cardPurple rounded-full md:rounded-lg px-20 py-2 pl-2 md:pl-4 md:pr-8 w-auto md:w-auto whitespace-nowrap transform hover:-translate-y-2 transition-transform duration-300"
                         >
                             <img
                                 src={client.image}

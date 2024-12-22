@@ -12,7 +12,7 @@ const Header = () => {
                     {/* Logo */}
                     <div className="text-xl sm:text-3xl sm:pb-3 font-bold">
                         <ScrollLink
-                            to="home"
+                            to="title"
                             smooth={true}
                             duration={900}
                             className="text-white mr-2 cursor-pointer"
@@ -20,7 +20,7 @@ const Header = () => {
                             Binary
                         </ScrollLink>
                         <ScrollLink
-                            to="home"
+                            to="title"
                             smooth={true}
                             duration={900}
                             className="text-custPurple cursor-pointer"
