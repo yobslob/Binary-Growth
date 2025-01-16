@@ -8,10 +8,10 @@ const reviews = [
         company: "",
     },
     {
-        video: "https://player.vimeo.com/video/1000470121?title=0&byline=0&portrait=0&badge=0&loop=1&quality=1080p", // Sample video URL
-        quote: "This service has transformed our workflow and exceeded expectations!",
-        reviewer: "Jane Smith",
-        company: "Innovate LLC",
+        video: "https://player.vimeo.com/video/1047637989?title=0&byline=0&portrait=0&badge=0&loop=1&quality=1080p", // Sample video URL
+        quote: "Never worked with a guy with such clearity and quick working process.",
+        reviewer: "Somrat Dutta",
+        company: "",
     },
 ];
 
