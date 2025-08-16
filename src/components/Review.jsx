@@ -73,49 +73,16 @@ const Review = () => {
         );
 
         cards.forEach((card, i) => {
-            // stagger delay stored in CSS variable
+            // stagger delay stored in CSS variable -- keep indexing but we'll add a base delay in CSS
             card.style.setProperty('--reveal-delay', `${i * 120}ms`);
             obs.observe(card);
 
-            // add tilt effect only if not reduced
-            if (!reduced) {
-                let frame = null;
-                const inner = card.querySelector('.reviews-inner');
-
-                function onMove(e) {
-                    const rect = card.getBoundingClientRect();
-                    const x = (e.clientX - rect.left) / rect.width - 0.5; // -0.5 .. 0.5
-                    const y = (e.clientY - rect.top) / rect.height - 0.5;
-                    const tiltX = (y * 8).toFixed(2);
-                    const tiltY = (x * -12).toFixed(2);
-
-                    if (frame) cancelAnimationFrame(frame);
-                    frame = requestAnimationFrame(() => {
-                        inner.style.transform = `perspective(900px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) translateZ(6px)`;
-                    });
-                }
-
-                function onLeave() {
-                    if (frame) cancelAnimationFrame(frame);
-                    inner.style.transition = 'transform 520ms cubic-bezier(.2,.9,.2,1)';
-                    inner.style.transform = `perspective(900px) rotateX(0deg) rotateY(0deg) translateZ(0px)`;
-                    setTimeout(() => { inner.style.transition = ''; }, 520);
-                }
-
-                card.addEventListener('mousemove', onMove);
-                card.addEventListener('mouseleave', onLeave);
-
-                // cleanup
-                card._cleanup = () => {
-                    card.removeEventListener('mousemove', onMove);
-                    card.removeEventListener('mouseleave', onLeave);
-                };
-            }
+            // NOTE: removed per-card mousemove tilt listeners as requested.
+            // Animations/transforms will only be applied to the parent card (.reviews-card).
         });
 
         return () => {
             obs.disconnect();
-            cards.forEach(c => c._cleanup && c._cleanup());
         };
     }, []);
 
@@ -141,13 +108,12 @@ const Review = () => {
                     transform-origin: center;
                 }
 
-                /* inner wrapper that receives tilt / 3D transform */
+                /* inner wrapper — no 3D tilt anymore */
                 #reviews .reviews-inner {
                     border-radius: 0.75rem;
                     background-clip: padding-box;
                     will-change: transform;
-                    transform-style: preserve-3d;
-                    transition: box-shadow 320ms ease, transform 320ms cubic-bezier(.2,.9,.2,1);
+                    transition: box-shadow 320ms ease;
                     box-shadow: 0 6px 18px rgba(2,6,23,0.25) inset;
                     padding: 0.5rem;
                     display: flex;
@@ -155,7 +121,7 @@ const Review = () => {
                     gap: 0.75rem;
                 }
 
-                /* video container: layered for parallax */
+                /* video container — static, no transforms */
                 #reviews .video-layer {
                     position: relative;
                     border-radius: 0.6rem;
@@ -167,16 +133,18 @@ const Review = () => {
                     width: 100%;
                 }
 
+                /* make iframe static and interactive */
                 #reviews .video-frame {
                     width: 100%;
                     height: 100%;
                     display: block;
                     border: 0;
                     transform-origin: center;
-                    transition: transform 560ms cubic-bezier(.2,.9,.2,1), opacity 420ms linear;
-                    will-change: transform, opacity;
-                    transform: translateZ(0);
-                    opacity: 0.98;
+                    transition: none; /* no hover transforms */
+                    will-change: auto;
+                    transform: none; /* force static */
+                    opacity: 1;
+                    pointer-events: auto; /* ensure clicks pass through */
                 }
 
                 /* text area */
@@ -184,9 +152,10 @@ const Review = () => {
                 #reviews .quote { font-style: italic; color: rgba(225,225,230,0.92); line-height:1.45; font-weight:600; margin:0; }
                 #reviews .reviewer { color: #9f5dfd; font-weight:700; margin-top:4px; }
 
-                /* in-view reveal animation: subtle scale + fade + blur->clear */
+                /* in-view reveal animation: subtle scale + fade + blur->clear
+                   Add a base delay so the reveal is delayed after entering viewport. */
                 #reviews .reviews-card { opacity: 0; transform: translateY(18px) scale(0.995); filter: blur(6px) saturate(.95); }
-                #reviews .reviews-card.in-view { animation: cardReveal 720ms cubic-bezier(.16,.9,.2,1) var(--reveal-delay) both; }
+                #reviews .reviews-card.in-view { animation: cardReveal 720ms cubic-bezier(.16,.9,.2,1) calc(var(--reveal-delay, 0ms) + 360ms) both; }
 
                 @keyframes cardReveal {
                     0% { opacity: 0; transform: translateY(18px) scale(0.995); filter: blur(6px) saturate(.95); }
@@ -194,11 +163,10 @@ const Review = () => {
                     100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0px) saturate(1); }
                 }
 
-                /* subtle parallax on hover: video moves slightly, vignette appears */
-                #reviews .reviews-card.in-view:hover .video-frame { transform: scale(1.06) translateY(-6px) rotateZ(0.01deg); }
-                #reviews .reviews-card.in-view:hover { box-shadow: 0 18px 50px rgba(2,6,23,0.52); }
+                /* subtle card hover: only apply to parent card (no effect to video) */
+                #reviews .reviews-card.in-view:hover { box-shadow: 0 18px 50px rgba(2,6,23,0.52); transform: translateY(-4px); }
 
-                /* reviewer underline reveal */
+                /* reviewer underline reveal (keep as is) */
                 #reviews .reviewer::after {
                     content: '';
                     display:block;
