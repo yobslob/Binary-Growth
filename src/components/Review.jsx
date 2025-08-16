@@ -129,22 +129,19 @@ const Review = () => {
                 /* container scope */
                 #reviews .reviews-grid { width: 100%; max-width: 64rem; display: grid; gap: 2.25rem; }
 
-                /* card base */
+                /* card base: two halves (left video, right text) */
                 #reviews .reviews-card {
                     --card-bg: rgba(255,255,255,0.01);
                     background: linear-gradient(180deg, var(--card-bg), rgba(255,255,255,0));
                     border-radius: 1rem;
-                    padding: 1rem;
+                    padding: 0.5rem;
                     border: 1px solid rgba(255,255,255,0.03);
                     overflow: visible;
                     will-change: transform, opacity;
                     transform-origin: center;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 1rem;
                 }
 
-                /* inner surface receives tilt transform; keep children independent for smoother 3D */
+                /* inner wrapper that receives tilt / 3D transform */
                 #reviews .reviews-inner {
                     border-radius: 0.75rem;
                     background-clip: padding-box;
@@ -152,7 +149,11 @@ const Review = () => {
                     transform-style: preserve-3d;
                     transition: box-shadow 320ms ease, transform 320ms cubic-bezier(.2,.9,.2,1);
                     box-shadow: 0 6px 18px rgba(2,6,23,0.25) inset;
-                    padding: 0.5rem;\                }
+                    padding: 0.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.75rem;
+                }
 
                 /* video container: layered for parallax */
                 #reviews .video-layer {
@@ -163,6 +164,7 @@ const Review = () => {
                     transform-origin: center;
                     background: rgba(0,0,0,0.25);
                     box-shadow: 0 8px 30px rgba(2,6,23,0.45) inset;
+                    width: 100%;
                 }
 
                 #reviews .video-frame {
@@ -178,19 +180,13 @@ const Review = () => {
                 }
 
                 /* text area */
-                #reviews .reviews-text { display:flex; flex-direction:column; gap:0.5rem; }
-                #reviews .quote { font-style: italic; color: rgba(225,225,230,0.92); line-height:1.45; font-weight:600; }
-                #reviews .reviewer { color: #9f5dfd; font-weight:700; }
+                #reviews .reviews-text { display:flex; flex-direction:column; gap:0.5rem; justify-content:center; }
+                #reviews .quote { font-style: italic; color: rgba(225,225,230,0.92); line-height:1.45; font-weight:600; margin:0; }
+                #reviews .reviewer { color: #9f5dfd; font-weight:700; margin-top:4px; }
 
                 /* in-view reveal animation: subtle scale + fade + blur->clear */
-                #reviews .reviews-card {
-                    opacity: 0; transform: translateY(18px) scale(0.995);
-                    filter: blur(6px) saturate(.95);
-                }
-
-                #reviews .reviews-card.in-view {
-                    animation: cardReveal 720ms cubic-bezier(.16,.9,.2,1) var(--reveal-delay) both;
-                }
+                #reviews .reviews-card { opacity: 0; transform: translateY(18px) scale(0.995); filter: blur(6px) saturate(.95); }
+                #reviews .reviews-card.in-view { animation: cardReveal 720ms cubic-bezier(.16,.9,.2,1) var(--reveal-delay) both; }
 
                 @keyframes cardReveal {
                     0% { opacity: 0; transform: translateY(18px) scale(0.995); filter: blur(6px) saturate(.95); }
@@ -212,36 +208,18 @@ const Review = () => {
                 }
                 #reviews .reviews-card.in-view:hover .reviewer::after { transform: scaleX(1); }
 
-                /* layout tweaks for larger screens */
+                /* layout: mobile first (stacked), desktop: two halves */
                 @media (min-width: 768px) {
-                    /* enforce row layout */
-                    #reviews .reviews-card { flex-direction: row; align-items: center; gap: 1.25rem; }
+                    #reviews .reviews-inner { flex-direction: row; align-items: center; gap: 1.25rem; }
 
-                    /* make video column larger and enforce dimensions so iframe appears bigger */
-                    #reviews .video-layer {
-                        flex: 0 0 62%;
-                        max-width: 62%;
-                        aspect-ratio: 16/9;
-                    }
+                    /* left half: video */
+                    #reviews .video-layer { flex: 0 0 62%; max-width: 62%; }
 
-                    /* make text column narrower and pinned to the right */
-                    #reviews .reviews-text {
-                        flex: 1 1 38%;
-                        max-width: 38%;
-                        text-align: left;
-                        padding-left: 0.75rem;
-                    }
+                    /* right half: text */
+                    #reviews .reviews-text { flex: 1 1 38%; max-width: 38%; padding-left: 1rem; text-align: left; }
 
-                    /* increase iframe visual size while preserving aspect ratio */
+                    /* explicit iframe height so the video looks larger */
                     #reviews .video-frame { height: 420px; width: 100%; }
-                }
-                    /* Increased video width so embedded video appears larger on desktop */
-                    #reviews .video-layer { width: 60%; }
-                    /* Move text block to the right and keep it compact */
-                    #reviews .reviews-text { width: 40%; text-align: left; }
-                }
-                    #reviews .video-layer { width: 46%; }
-                    #reviews .reviews-text { width: 54%; }
                 }
 
                 /* accessibility: reduce motion stops transforms/transitions */
