@@ -8,9 +8,9 @@ const reviews = [
         company: "",
     },
     {
-        video: "https://player.vimeo.com/video/1047637989?title=0&byline=0&portrait=0&badge=0&loop=1&quality=1080p", // Sample video URL
-        quote: "Never worked with a guy with such clearity and quick working process.",
-        reviewer: "Somrat Dutta",
+        video: "https://player.vimeo.com/video/1110559939?title=0&byline=0&portrait=0&badge=0&loop=1&quality=1080p", // Sample video URL
+        quote: "We've seen an exponential growth which is bringing in consistent leads.",
+        reviewer: "Alec Burcham",
         company: "",
     },
 ];
