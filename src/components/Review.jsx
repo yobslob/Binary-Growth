@@ -215,6 +215,11 @@ const Review = () => {
                 /* layout tweaks for larger screens */
                 @media (min-width: 768px) {
                     #reviews .reviews-card { flex-direction: row; align-items: center; gap: 1.25rem; }
+                    /* Increased video width so embedded video appears larger on desktop */
+                    #reviews .video-layer { width: 60%; }
+                    /* Move text block to the right and keep it compact */
+                    #reviews .reviews-text { width: 40%; text-align: left; }
+                }
                     #reviews .video-layer { width: 46%; }
                     #reviews .reviews-text { width: 54%; }
                 }
