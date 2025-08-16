@@ -74,7 +74,7 @@ const Review = () => {
 
         cards.forEach((card, i) => {
             // stagger delay stored in CSS variable -- keep indexing but we'll add a base delay in CSS
-            card.style.setProperty('--reveal-delay', `${i * 120}ms`);
+            card.style.setProperty('--reveal-delay', `${i * 320}ms`);
             obs.observe(card);
 
             // NOTE: removed per-card mousemove tilt listeners as requested.
