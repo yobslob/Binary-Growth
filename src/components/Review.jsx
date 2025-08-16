@@ -175,7 +175,7 @@ const Review = () => {
                     transform-origin: center;
                     transition: transform 560ms cubic-bezier(.2,.9,.2,1), opacity 420ms linear;
                     will-change: transform, opacity;
-                    transform: scale(1.02) translateZ(0);
+                    transform: translateZ(0);
                     opacity: 0.98;
                 }
 
