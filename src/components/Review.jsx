@@ -51,6 +51,105 @@ const Review = () => {
             id="reviews"
             className="min-h-screen gradient-bg text-white flex flex-col items-center justify-center py-12 md:py-20 px-4 md:px-8"
         >
+            {/* Local styles for minimal, smooth animations and refined card texture. */}
+            <style>{`
+                /* subtle fade+slide up used on load */
+                @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+
+                .review-grid { display: grid; gap: 2.5rem; width: 100%; max-width: 64rem; }
+                @media (min-width: 768px) { .review-grid { grid-template-columns: 1fr; } }
+
+                .review-card {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    padding: 1.25rem;
+                    border-radius: 1rem;
+                    border: 1px solid rgba(255,255,255,0.04);
+                    backdrop-filter: blur(6px);
+                    transition: transform 400ms cubic-bezier(.2,.9,.2,1), box-shadow 300ms ease, border-color 300ms ease;
+                    will-change: transform;
+                    animation: fadeUp 480ms ease forwards;
+                    opacity: 0; /* animated to 1 by keyframe */
+                    background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+                }
+
+                .review-card:hover {
+                    transform: translateY(-6px);
+                    box-shadow: 0 12px 30px rgba(12,16,24,0.45);
+                    border-color: rgba(255,255,255,0.06);
+                }
+
+                .video-wrap {
+                    position: relative;
+                    width: 100%;
+                    border-radius: 0.75rem;
+                    overflow: hidden;
+                    aspect-ratio: 16/9;
+                    box-shadow: 0 6px 18px rgba(2,6,23,0.35) inset;
+                    border: 1px solid rgba(255,255,255,0.03);
+                    transform-origin: center;
+                    transition: transform 450ms cubic-bezier(.2,.9,.2,1);
+                }
+
+                .review-card:hover .video-wrap { transform: scale(1.01); }
+
+                .video-frame {
+                    width: 100%;
+                    height: 100%;
+                    border: 0;
+                    display: block;
+                }
+
+                .review-text {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 0.5rem;
+                    text-align: left;
+                }
+
+                .quote {
+                    color: rgba(225,225,230,0.9);
+                    font-style: italic;
+                    line-height: 1.45;
+                    font-weight: 600;
+                    letter-spacing: -0.2px;
+                    margin: 0;
+                }
+
+                .reviewer {
+                    color: #9f5dfd; /* keep existing accent */
+                    font-weight: 700;
+                    margin-top: 0.25rem;
+                    font-size: 0.92rem;
+                }
+
+                /* small animated accent bar under reviewer name */
+                .reviewer::after {
+                    content: '';
+                    display: block;
+                    height: 3px;
+                    width: 36px;
+                    margin-top: 8px;
+                    border-radius: 99px;
+                    background: linear-gradient(90deg, rgba(159,93,253,0.95), rgba(159,93,253,0.6));
+                    transform-origin: left center;
+                    transform: scaleX(0);
+                    transition: transform 420ms cubic-bezier(.2,.9,.2,1) 150ms;
+                }
+
+                .review-card:hover .reviewer::after { transform: scaleX(1); }
+
+                /* small responsive tweaks */
+                @media (min-width: 768px) {
+                    .review-card { flex-direction: row; align-items: center; gap: 1.25rem; }
+                    .video-wrap { width: 48%; }
+                    .review-text { width: 52%; }
+                }
+
+            `}</style>
+
             {/* Heading */}
             <div className="text-center mb-8 md:mb-12">
                 <h4 className="text-lg md:text-2xl lg:text-4xl text-testPurple font-bold mb-4">
@@ -62,32 +161,28 @@ const Review = () => {
             </div>
 
             {/* Reviews */}
-            <div className="space-y-16 md:space-y-32 w-full max-w-4xl">
+            <div className="review-grid">
                 {reviews.map((review, index) => (
                     <div
                         key={index}
-                        className="flex flex-col md:flex-row items-center md:items-start bg-transparent rounded-xl p-4 md:p-6 gap-4"
+                        className="review-card"
+                        style={{ animationDelay: `${index * 140}ms` }}
                     >
                         {/* Video */}
-                        <div className="flex-shrink-0 w-full md:w-1/2">
+                        <div className="video-wrap">
                             <iframe
                                 src={review.video}
                                 title={`Review Video ${index + 1}`}
-                                frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowFullScreen
-                                className="w-full h-48 md:h-56 rounded-lg"
+                                className="video-frame"
                             ></iframe>
                         </div>
 
                         {/* Text */}
-                        <div className="flex flex-col pt-2 md:pt-4 pr-0 md:pr-8 justify-center w-full text-center md:text-left">
-                            <p className="text-sm md:text-lg italic text-gray-300 font-semiBold">
-                                “{review.quote}”
-                            </p>
-                            <p className="text-testPurple mt-2 text-xs md:text-sm font-semiBold">
-                                {review.reviewer} <span className="font-normal">{review.company}</span>
-                            </p>
+                        <div className="review-text">
+                            <p className="quote">“{review.quote}”</p>
+                            <p className="reviewer">{review.reviewer} <span style={{ fontWeight: 400, color: 'rgba(225,225,230,0.8)', marginLeft: 6 }}>{review.company}</span></p>
                         </div>
                     </div>
                 ))}
