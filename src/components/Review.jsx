@@ -214,7 +214,27 @@ const Review = () => {
 
                 /* layout tweaks for larger screens */
                 @media (min-width: 768px) {
+                    /* enforce row layout */
                     #reviews .reviews-card { flex-direction: row; align-items: center; gap: 1.25rem; }
+
+                    /* make video column larger and enforce dimensions so iframe appears bigger */
+                    #reviews .video-layer {
+                        flex: 0 0 62%;
+                        max-width: 62%;
+                        aspect-ratio: 16/9;
+                    }
+
+                    /* make text column narrower and pinned to the right */
+                    #reviews .reviews-text {
+                        flex: 1 1 38%;
+                        max-width: 38%;
+                        text-align: left;
+                        padding-left: 0.75rem;
+                    }
+
+                    /* increase iframe visual size while preserving aspect ratio */
+                    #reviews .video-frame { height: 420px; width: 100%; }
+                }
                     /* Increased video width so embedded video appears larger on desktop */
                     #reviews .video-layer { width: 60%; }
                     /* Move text block to the right and keep it compact */
