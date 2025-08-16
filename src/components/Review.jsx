@@ -140,16 +140,14 @@ const Review = () => {
                     display: block;
                     border: 0;
                     transform-origin: center;
-                    transition: none; /* no hover transforms */
                     will-change: auto;
-                    transform: none; /* force static */
                     opacity: 1;
                     pointer-events: auto; /* ensure clicks pass through */
                 }
 
                 /* text area */
                 #reviews .reviews-text { display:flex; flex-direction:column; gap:0.5rem; justify-content:center; }
-                #reviews .quote { font-style: italic; color: rgba(225,225,230,0.92); line-height:1.45; font-weight:600; margin:0; }
+                #reviews .quote { font-style: italic; color: rgba(225,225,230,0.92); line-height:1.45; font-weight:300; margin:0; }
                 #reviews .reviewer { color: #9f5dfd; font-weight:700; margin-top:4px; }
 
                 /* in-view reveal animation: subtle scale + fade + blur->clear
@@ -212,7 +210,7 @@ const Review = () => {
                     <article
                         key={index}
                         className="reviews-card"
-                        style={{ '--reveal-delay': `${index * 120}ms` }}
+                        style={{ '--reveal-delay': `${index * 420}ms` }}
                         aria-labelledby={`review-${index}-author`}
                     >
                         <div className="reviews-inner">
