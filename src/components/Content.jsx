@@ -96,10 +96,10 @@ const Content = () => {
                                     } blur-3xl opacity-50 z-[-1]`}
                             ></div>
                             <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold text-center mb-9 sm:mb-10 md:mb-10 lg:mb-12">
-                                Motion Graphics
+                                Podcasts
                             </h1>
                             <div className="flex h-72 bg-transparent flex-wrap justify-center gap-3 lg:gap-12 mb-44 md:mb-36 lg:mb-96">
-                                {["1000136232", "1000135296", "1004792092"].map((id, index) => (
+                                {["1145447235", "1145447109", "1145447343"].map((id, index) => (
                                     <iframe
                                         key={id}
                                         src={`https://player.vimeo.com/video/${id}?title=0&byline=0&portrait=0&badge=0&quality=1080p&transparent=0&dnt=1`}
@@ -121,10 +121,10 @@ const Content = () => {
                                     } blur-3xl opacity-50 z-[-1]`}
                             ></div>
                             <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold text-center mb-9 sm:mb-10 md:mb-10 lg:mb-12">
-                                Informative Shorts
+                                Motion Graphics
                             </h1>
                             <div className="flex h-72 bg-transparent flex-wrap justify-center gap-3 lg:gap-12 mb-44 md:mb-36 lg:mb-72">
-                                {["1000131679", "1000131220", "1004797784"].map((id, index) => (
+                                {["1000136232", "1000135296", "1145450104"].map((id, index) => (
                                     <iframe
                                         key={id}
                                         src={`https://player.vimeo.com/video/${id}?title=0&byline=0&portrait=0&badge=0&quality=1080p&transparent=0&dnt=1`}
