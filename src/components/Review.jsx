@@ -128,16 +128,16 @@ const Review = () => {
                 }
 
                 /* video container — static, no transforms */
-                 #reviews .video-layer {
-     position: relative;
-     border-radius: 0.6rem;
-     overflow: hidden;
-     aspect-ratio: 1 / 1; /* make it square */
-     transform-origin: center;
-     background: rgba(0,0,0,0.25);
-     box-shadow: 0 8px 30px rgba(2,6,23,0.45) inset;
-     width: 100%;
- }
+                #reviews .video-layer {
+                    position: relative;
+                    border-radius: 0.6rem;
+                    overflow: hidden;
+                    aspect-ratio: 16/9;
+                    transform-origin: center;
+                    background: rgba(0,0,0,0.25);
+                    box-shadow: 0 8px 30px rgba(2,6,23,0.45) inset;
+                    width: 100%;
+                }
 
                 /* make iframe static and interactive */
                 #reviews .video-frame {
@@ -191,7 +191,7 @@ const Review = () => {
                     #reviews .reviews-text { flex: 1 1 38%; max-width: 38%; padding-left: 1rem; text-align: left; }
 
                     /* explicit iframe height so the video looks larger */
-                    #reviews .video-frame { height: 100%; width: 100%; }
+                    #reviews .video-frame { height: 420px; width: 100%; }
                 }
 
                 /* accessibility: reduce motion stops transforms/transitions */
