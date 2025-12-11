@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 
 const reviews = [
     {
-        video: "https://player.vimeo.com/video/1145440574?title=0&byline=0&portrait=0&badge=0&loop=1&quality=1080p",
+        video: "https://player.vimeo.com/video/1145456816?title=0&byline=0&portrait=0&badge=0&loop=1&quality=1080p",
         quote: "his music selection and the standard of his editing skills are far superior to any other editor that I've ever worked with!",
         reviewer: "Phoebe Kuhn",
         company: "",
