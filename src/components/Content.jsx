@@ -71,7 +71,7 @@ const Content = () => {
                                     } blur-3xl opacity-50 z-[-1]`}
                             ></div>
                             <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold text-center mb-9 sm:mb-10 md:mb-10 lg:mb-11">
-                                Daniel Dalen's Style
+                                Hypertext Edits
                             </h1>
                             <div className="flex h-72 bg-transparent flex-wrap justify-center gap-3 lg:gap-12 mb-44 md:mb-36 lg:mb-96">
                                 {["1004793088", "1000112241", "1000144834"].map((id, index) => (
@@ -96,7 +96,7 @@ const Content = () => {
                                     } blur-3xl opacity-50 z-[-1]`}
                             ></div>
                             <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold text-center mb-9 sm:mb-10 md:mb-10 lg:mb-12">
-                                Podcasts
+                                Podcasts Trailers
                             </h1>
                             <div className="flex h-72 bg-transparent flex-wrap justify-center gap-3 lg:gap-12 mb-44 md:mb-36 lg:mb-96">
                                 {["1145447235", "1145447109", "1145447343"].map((id, index) => (
